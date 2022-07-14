@@ -49,6 +49,7 @@ header nav ul>li {
 
 header nav ul>li a {
     text-decoration: none;
+    letter-spacing: 1.1px;
     color: rgba(255, 255, 255, 0.4);
     font-family: 'Heebo', sans-serif;
     font-weight: bold;
@@ -79,6 +80,7 @@ header nav ul>li a:hover {
 
 .intro {
     display: flex;
+    justify-content: space-between;
     height: 34rem;
     padding: 0 7rem;
     background-color: rgb(38, 44, 67);
@@ -86,12 +88,8 @@ header nav ul>li a:hover {
     padding-top: 5rem;
 }
 
-.intro section:first-child {
+.intro>section:first-child {
     width: 45%;
-}
-
-.intro section:last-child {
-    width: 55%;
 }
 
 .intro section:first-child>h1 {
@@ -107,11 +105,16 @@ header nav ul>li a:hover {
     margin-top: 1rem;
     font-family: 'Heebo', sans-serif;
     font-weight: 100;
+    text-align: center;
+}
+
+.intro section:first-child .intro-p {
+    text-align: left;
 }
 
 .intro section>div {
     display: flex;
-    margin-top: 3rem;
+    margin: 2rem 0;
     justify-content: center;
 }
 
@@ -142,8 +145,7 @@ header nav ul>li a:hover {
     border: 40px solid white;
     border-radius: 15px;
     margin-bottom: 4rem;
-    padding: 8rem 4rem;
-    width: 37.5rem;
+    padding: 8rem 10rem;
     background-color: rgb(219, 221, 233);
     display: flex;
     justify-content: center;
@@ -706,20 +708,33 @@ CSS:
 
 /* 480px, 768px, 992px, and 1200px respectively are the most commonly used screen sizes/media queries */
 @media screen and (max-width: 1300px) {
-
-    /* .intro section>div {
-        padding: 1.15rem;
-        margin-top: 1rem;
-    } */
     .intro section div>a {
         padding: 1rem;
     }
 
+    .intro .img-here>section {
+        padding: 6rem 8rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .intro {
+        padding-top: 4rem;
+    }
+
+    .intro>section:first-child {
+        margin-top: 2.75rem;
+    }
+
+    .intro .img-here>section {
+        padding: 5rem 7rem;
+    }
 }
 
 @media screen and (max-width: 992px) {
     header {
-        padding: 0 5rem;
+        padding: 0 4rem;
     }
 
     header nav ul>li {
@@ -731,7 +746,13 @@ CSS:
     }
 
     .intro {
-        padding: 5rem 5rem 0 5rem;
+        padding: 2.5rem 4rem 0 4rem;
+        flex-direction: column;
+        height: 220vh;
+    }
+
+    .intro>section:first-child {
+        width: 100%;
     }
 
     .intro section:first-child>h1 {
@@ -740,29 +761,23 @@ CSS:
 
     .intro section:first-child>p {
         font-size: 1.2rem;
+        width: 75%;
     }
 
     .intro section div>a {
-        padding: .5rem 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .intro .img-here {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 1.15rem;
+        margin: 0 2rem;
     }
 
     .intro .img-here>section {
-        border: 40px solid white;
+        border: 30px solid white;
         border-radius: 15px;
         margin-bottom: 4rem;
-        padding: 8rem 4rem;
-        width: 30.5rem;
         background-color: rgb(219, 221, 233);
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10rem 12rem;
     }
 
     .intro .img-here section>section {
