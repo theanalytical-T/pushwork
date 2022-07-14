@@ -706,14 +706,18 @@ CSS:
 }
  */
 
-/* 480px, 768px, 992px, and 1200px respectively are the most commonly used screen sizes/media queries */
+/* 480px, 768px, 992px, and 1200px respectively are the most commonly used screen sizes/media queries... I like to add in 1300px when things get crazy */
 @media screen and (max-width: 1300px) {
+    .intro {
+        align-items: center;
+    }
+
     .intro section div>a {
         padding: 1rem;
     }
 
     .intro .img-here>section {
-        padding: 6rem 8rem;
+        padding: 4rem 6rem;
     }
 
 }
@@ -728,7 +732,13 @@ CSS:
     }
 
     .intro .img-here>section {
-        padding: 5rem 7rem;
+        padding: 4rem 6rem;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .intro .img-here>section {
+        padding: 2rem 4rem;
     }
 }
 
@@ -746,9 +756,9 @@ CSS:
     }
 
     .intro {
-        padding: 2.5rem 4rem 0 4rem;
+        padding: 2rem 4rem 0 4rem;
         flex-direction: column;
-        height: 220vh;
+        height: 150vh;
     }
 
     .intro>section:first-child {
@@ -795,6 +805,94 @@ CSS:
         font-size: 2rem;
     }
 
+    .companies {
+        justify-content: center;
+    }
+
+    .companies i {
+        margin: 0 .55rem;
+    }
+
+    body>section:nth-child(4) {
+        flex-direction: column;
+    }
+
+    /* Where I Left off */
+    section:nth-child(4) .marketing-content {
+        width: 100%;
+    }
+
+    /* section:nth-child(4) .marketing-content a {
+        margin: 0 auto;
+    } */
+
+    section:nth-child(4) .four-part-gallery {
+        width: 100%;
+    }
+
+    .advertising,
+    .create-account {
+        flex-direction: column;
+    }
+
+    .advertising .img-here,
+    .create-account .img-here {
+        margin-bottom: 8rem;
+    }
+
+    .solution-based,
+    .create-account-content {
+        width: 100%;
+    }
+
+    .how-it-works {
+        width: 80%;
+    }
+
+    .chevron-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .chevron-icons i {
+        margin: 1rem 2rem;
+    }
+
+    .core {
+        width: 100%;
+    }
+
+    .love {
+        padding: 3rem;
+    }
+
+    .uber {
+        width: 80%;
+        margin: 0 1rem;
+    }
+
+    .place-order {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .place-order-content {
+        margin: 1rem auto;
+    }
+
+    .content-buttons {
+        margin: 1rem auto;
+    }
+
+    footer {
+        padding: 3rem 4rem;
+        font-size: 11.5px;
+    }
+
+    footer section {
+        padding: 0 .5rem;
+    }
 
 }
 
